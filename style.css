@@ -72,6 +72,7 @@ main {
     padding: 0.5rem;
     height: 3rem;
     border-radius: 5px;
+    border: none;
 }
 
 .button,
@@ -84,6 +85,7 @@ main {
     color: #3B4664;
     background-color: #EAE3DB;
     padding: 0.5rem;
+    border: none;
 }
 
 .Equals {
