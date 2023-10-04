@@ -1,4 +1,5 @@
 let screen = document.getElementById('screen');
+
 let buttons = document.querySelectorAll("button");
 let screenValue = ""
     // console.log(buttons)
@@ -23,18 +24,26 @@ for (item of buttons) {
             if (inputbtn === "=") {
                 if (!hasOperator(screenValue.slice(-1)) && screenValue.slice(-1) != "") {
                     let calc = eval(screenValue)
+
                     screen.value = calc;
                     console.log(calc)
                     screenValue = ""
                     return
                 } else {
+                    screen.value = "Invalid Input";
+                    screenValue = "";
                     console.log("please enter valid entry")
                     return
                 }
             } else if (inputbtn === "DEL") {
-                console.log("del here")
+                let del = screenValue.slice(0, -1);
+                screenValue = del;
+                screen.value = screenValue;
+                console.log("del here", screenValue)
                 return
             } else {
+                screenValue = ""
+                screen.value = screenValue;
                 console.log("reset here")
                 return
             }
@@ -52,17 +61,19 @@ for (item of buttons) {
                 } else {
                     screenValue = screenValue.slice(0, -1)
                     screenValue += inputbtn
+                    screen.value = screenValue;
                     console.log(screenValue)
                 }
                 return
-                // console.log(screenValue)
+
             }
 
-            // console.log(screenValue)
+
             screenValue += inputbtn
-                // console.log("is operator")
+            screen.value = screenValue;
         } else {
             screenValue += inputbtn
+            screen.value = screenValue;
         }
         console.log(screenValue)
 
