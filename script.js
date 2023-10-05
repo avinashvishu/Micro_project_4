@@ -26,8 +26,9 @@ for (item of buttons) {
                     let calc = eval(screenValue)
 
                     screen.value = calc;
+                    screenValue = screen.value;
                     console.log(calc)
-                    screenValue = ""
+
                     return
                 } else {
                     screen.value = "Invalid Input";
