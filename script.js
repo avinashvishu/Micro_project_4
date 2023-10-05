@@ -28,7 +28,10 @@ for (item of buttons) {
                     screen.value = calc;
                     screenValue = screen.value;
                     console.log(calc)
-
+                    if (screen.value === "Infinity") {
+                        screenValue = "";
+                        return
+                    }
                     return
                 } else {
                     screen.value = "Invalid Input";
