@@ -46,6 +46,7 @@ main {
     background-color: #181F32;
     border: none;
     border-radius: 5px;
+    padding-right: 1rem;
 }
 
 .button-container {
